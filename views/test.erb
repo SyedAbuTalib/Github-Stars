@@ -1,3 +1,48 @@
-<h1><%= Time.now %></h1>
-<p>kill my self</p>
-<p><%= @temp_var %></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300"
+      rel="stylesheet"
+    />
+      <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+        <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+      integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+      crossorigin="anonymous"
+    ></script>
+        <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+        <link rel="stylesheet" href="test.css" />
+        <link rel="stylesheet" href="masonry.css" />
+        <title>Github Stars</title>
+      </head>
+      <body>
+        <main>
+          <div class="container">
+            <div class="col intro-box">
+              <h1>Github Stars</h1>
+              <p>In Ruby</p>
+            </div>
+            <div class='masonry'>
+              <% @temp_var.each do |f| %>
+                <div class="row item">
+                  <a href="https://github.com/<%= f %>%>">
+                    <img src="https://gh-card.dev/repos/<%= f %>.svg"></a>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </main>
+      </body>
+    </html>
