@@ -6,12 +6,12 @@ require 'github_api'
 class GithubWrapper
   def stars(username)
     gh = Github.new auto_pagination: true
-    list = gh.activity.starring.starred user: username
+    mashes = gh.activity.starring.starred user: username
 
-    # list.each do |i|
-    #   puts i.full_name
-    # end
-
-    list.size
+    list = []
+    mashes.each do |f|
+      list << f.full_name
+    end
+    list
   end
 end
