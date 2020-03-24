@@ -2,10 +2,6 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300"
-      rel="stylesheet"
-    />
       <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -37,8 +33,8 @@
             <div class='masonry'>
               <% @temp_var.each do |f| %>
                 <div class="row item">
-                  <a href="https://github.com/<%= f %>%>">
-                    <img src="https://gh-card.dev/repos/<%= f %>.svg"></a>
+                  <a href="https://github.com/<%= f %>">
+                    <img class="card-image" src="https://gh-card.dev/repos/<%= f %>.svg"></a>
                 </div>
               <% end %>
             </div>
