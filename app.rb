@@ -8,13 +8,10 @@ configure :development do
   BetterErrors.application_root = __dir__
 end
 
-
 require_relative 'github_wrapper'
 
-
-
 get('/') do
-  'Help me'
+  erb :index
 end
 
 get('/test') do

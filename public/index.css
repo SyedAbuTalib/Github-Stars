@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+body {
+  font-family: 'Dosis', sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  background-color: #f6fafb;
+}
+.navbar {
+  border: none;
+  box-shadow: none;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  background-color: white;
+  color: black;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: black;
+}
+.navbar-default .navbar-brand {
+  font-weight: 700;
+  font-size: 1.25em;
+  letter-spacing: 0.1px;
+}
+.container-fluid {
+  background-color: #fff;
+}
+.navbar-toggle {
+  border: none;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: black;
+}
+
+/* Base styling */
+.mega {
+  width: inherit;
+}
+
+.search__container {
+  margin: 0 auto;
+  padding-top: 64px;
+  width: 430px;
+}
+
+.search__title {
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  color: #ff8b88;
+}
+
+.search__input {
+  width: 100%;
+  padding: 12px 24px;
+
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #575756;
+  background-color: transparent;
+  /*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.search__input::placeholder {
+  color: rgba(87, 87, 86, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.search__input:hover,
+.search__input:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.credits__container {
+  margin-top: 24px;
+}
+
+.credits__text {
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.credits__link {
+  color: #ff8b88;
+  text-decoration: none;
+  transition: color 250ms ease-in;
+}
+
+.credits__link:hover,
+.credits__link:focus {
+  color: rgb(191, 137, 135);
+}
+
+.heart {
+  color: #e25555;
+}
