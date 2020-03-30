@@ -19,5 +19,7 @@ post('/') do
   g = GithubWrapper.new
   list = g.stars(username)
   @temp_var = list
+  # puts Gem.loaded_specs.values.map(&:full_gem_path)
+
   erb :test, locals: { list: @temp_var, 'username' => username }
 end
