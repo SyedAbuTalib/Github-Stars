@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
 
 body {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   font-style: normal;
   font-weight: 100;
   background-color: #f6fafb;
+  font-size: 2em;
 }
 .navbar {
   border: none;
@@ -21,8 +22,8 @@ body {
 }
 .navbar-default .navbar-brand {
   font-weight: 700;
-  font-size: 1.25em;
-  letter-spacing: 0.1px;
+  font-size: 2.25em;
+  letter-spacing: 2px;
 }
 .container-fluid {
   background-color: #fff;

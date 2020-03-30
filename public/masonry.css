@@ -1,6 +1,11 @@
 /* Box-sizing reset: //w3bits.com/?p=3225 */
 html {
-  box-sizing: border-box;
+  box-sizing: content-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 *,
@@ -11,9 +16,10 @@ html {
 
 /* The Masonry Container */
 .masonry {
-  margin: 1.5em auto;
-  max-width: 768px;
-  column-gap: 1.5em;
+  /* margin: 1.5em auto; */
+  margin: 0 auto;
+  max-width: 90%;
+  column-gap: 1em;
 }
 
 /* The Masonry Brick */
@@ -21,7 +27,8 @@ html {
   background: #fff;
   width: inherit;
   padding: 1em;
-  margin: 0 0 1.5em;
+  /* margin: 0 0 1.5em; */
+  box-sizing: content-box;
 }
 
 /* Masonry on large screens */
