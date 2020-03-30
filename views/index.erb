@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <%= erb :head_partial %>
+  <%= erb :_head %>
   <body>
-    <%= erb :navbar_partial %>
-    <div class="mega">
-      <div class="search__container">
-        <p class="search__title">
-          Search for a user
-        </p>
-        <form action="/" method="POST">
-          <input class="search__input" name="username" type="text" placeholder="Search">
-          <input type="submit" style="display: none" />
-        </form>
-      </div>
-      <div class="credits__container">
-        <p class="credits__text">Made with <span class="heart">❤</span> by <a href="http://abutalib.xyz" target="_blank">Syed AbuTalib</a></p>
-      </div>
-    </div>
+    <%= erb :_navbar %>
+    <%= erb :_searchbar %>
+    <%= erb :_footer %>
   </body>
 </html>

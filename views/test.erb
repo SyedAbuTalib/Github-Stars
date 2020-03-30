@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%= erb :head_partial %>
+  <%= erb :_head %>
   <body>
-    <%= erb :navbar_partial %>
+    <%= erb :_navbar %>
+    <%= erb :_searchbar %>
     <div class='masonry'>
       <% @temp_var.each do |f| %>
         <a class="item" href="https://github.com/<%= f %>">
           <img class="card-image" src="https://gh-card.dev/repos/<%= f %>.svg"></a>
       <% end %>
     </div>
+    <%= erb :_footer %>
   </body>
 </html>
