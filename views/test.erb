@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <%= erb :head_partial %>
-    <body>
-      <%= erb :navbar_partial %>
-      <main>
-        <div class="container">
-          <div class='masonry'>
-            <% @temp_var.each do |f| %>
-              <div class="row item">
-                <a href="https://github.com/<%= f %>">
-                  <img class="card-image" src="https://gh-card.dev/repos/<%= f %>.svg"></a>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </main>
-    </body>
-  </html>
+  <body>
+    <%= erb :navbar_partial %>
+    <div class='masonry'>
+      <% @temp_var.each do |f| %>
+        <a class="item" href="https://github.com/<%= f %>">
+          <img class="card-image" src="https://gh-card.dev/repos/<%= f %>.svg"></a>
+      <% end %>
+    </div>
+  </body>
+</html>
