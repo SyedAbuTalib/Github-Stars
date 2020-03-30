@@ -14,18 +14,10 @@ get('/') do
   erb :index
 end
 
-get('/test') do
+post('/') do
+  username = params[:username] || 'alipervaiz'
   g = GithubWrapper.new
-  list = g.stars('alipervaiz')
+  list = g.stars(username)
   @temp_var = list
-  # puts list
-  # @temp_var = nil
-  erb :test, locals: { list: @temp_var }
-end
-
-get('/:name') do
-  g = GithubWrapper.new
-  list = g.stars(params['name'])
-  list.size
-  "<h1>#{list.size}</h1>"
+  erb :test, locals: { list: @temp_var, 'username' => username }
 end

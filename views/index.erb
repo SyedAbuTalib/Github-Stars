@@ -45,7 +45,10 @@
         <p class="search__title">
           Search for a user
         </p>
-        <input class="search__input" type="text" placeholder="Search">
+        <form action="/" method="POST">
+          <input class="search__input" name="username" type="text" placeholder="Search">
+          <input type="submit" style="display: none" />
+        </form>
       </div>
       <div class="credits__container">
         <p class="credits__text">Made with <span class="heart">❤</span> by <a href="http://abutalib.xyz" target="_blank">Syed AbuTalib</a></p>
