@@ -23,3 +23,7 @@ post('/') do
 
   erb :test, locals: { list: @temp_var, 'username' => username }
 end
+
+get('/test') do
+  erb :temp
+end
