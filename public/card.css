@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+.box1 {
+  box-sizing: inherit;
+  color: rgb(36, 41, 46);
+  display: list-item;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+}
