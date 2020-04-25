@@ -5,9 +5,11 @@
     <%= erb :_navbar %>
     <div class="box1" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Name (ICPC)</h5>
+        <h5 class="card-title"><%= repo %> Name (ICPC)</h5>
         <p class="card-text">A description here. sladjflasd f.sf sldkf sfkdfls fsladf s</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class='card-bottom'>
+          <p style="fill: <%= @lc.color('cpp') %>"><%= dot %></p>
+        </div>
       </div>
     </div>
     <%= erb :_footer %>

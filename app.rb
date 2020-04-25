@@ -3,6 +3,9 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'better_errors'
+require 'octicons'
+require 'language_colors'
+
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
@@ -21,9 +24,13 @@ post('/') do
   @temp_var = list
   # puts Gem.loaded_specs.values.map(&:full_gem_path)
 
-  erb :test, locals: { list: @temp_var, 'username' => username }
+  erb :masonry, locals: { list: @temp_var, 'username' => username }
 end
 
 get('/test') do
-  erb :temp
+  @repo = Octicons::Octicon.new("repo")
+  @dot = Octicons::Octicon.new('primitive-dot')
+  @lc = LanguageColors::LanguageColors.new
+
+  erb :card, locals: { repo: @repo.to_svg, dot: @dot.to_svg, lc: @lc }
 end

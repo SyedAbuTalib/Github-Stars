@@ -9,6 +9,8 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'github_api'
+gem 'language_colors', '~> 0.1.1'
+gem 'octicons'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'

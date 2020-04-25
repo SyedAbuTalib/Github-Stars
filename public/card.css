@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@3/distr/fira_code.css);
+
+.card-text, .card-title { font-family: 'Fira Code', monospace; }
+
+@supports (font-variation-settings: normal) {
+  .card-text, .card-title { font-family: 'Fira Code VF', monospace; }
+}
+
+.card-text {
+  font-size: .8em;
+}
 
 .box1 {
   box-sizing: inherit;
   color: rgb(36, 41, 46);
   display: list-item;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
   text-align: left;
   font-family: 'Roboto Mono', monospace;
 }
