@@ -7,13 +7,21 @@
 }
 
 .card-text {
-  font-size: .8em;
+  font-size: .9em;
+  padding-right: 1em;
+  overflow-wrap: break-word;
+}
+
+.card-bottom {
+  display: flex;
+  /* padding: 1em; */
+  font-size: .9em;
 }
 
 .box1 {
   box-sizing: inherit;
+  margin: 0;
   color: rgb(36, 41, 46);
-  display: list-item;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
   text-align: left;
   font-family: 'Roboto Mono', monospace;

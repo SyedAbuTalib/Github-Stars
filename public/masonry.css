@@ -24,11 +24,13 @@ img {
 
 /* The Masonry Brick */
 .item {
-  background: #fff;
   width: inherit;
   padding: 1em;
   /* margin: 0 0 1.5em; */
   box-sizing: content-box;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 /* Masonry on large screens */
