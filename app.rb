@@ -20,17 +20,16 @@ end
 post('/') do
   username = params[:username] || 'alipervaiz'
   g = GithubWrapper.new
-  list = g.stars(username)
+  list = g.goodies(username)
   @temp_var = list
+  @repo = Octicons::Octicon.new('repo')
+  @dot = Octicons::Octicon.new('primitive-dot')
+  @star = Octicons::Octicon.new('star')
+  @forked = Octicons::Octicon.new('repo-forked')
+  @lc = LanguageColors::LanguageColors.new
   # puts Gem.loaded_specs.values.map(&:full_gem_path)
 
-  erb :masonry, locals: { list: @temp_var, 'username' => username }
-end
-
-get('/test') do
-  @repo = Octicons::Octicon.new("repo")
-  @dot = Octicons::Octicon.new('primitive-dot')
-  @lc = LanguageColors::LanguageColors.new
-
-  erb :card, locals: { repo: @repo.to_svg, dot: @dot.to_svg, lc: @lc }
+  erb :masonry, locals: { list: @temp_var, 'username' => username,
+                          repo: @repo.to_svg, dot: @dot.to_svg,
+                          star: @star.to_svg, forked: @forked.to_svg, lc: @lc }
 end
