@@ -1,0 +1,20 @@
+<div class="item">
+  <a style="text-decoration: none" href="https://www.github.com/<%= f[5] %>" target="_blank">
+    <div class="box1">
+      <div class="card-body">
+        <div>
+          <h5 class="card-title"><%= repo %> <%= f[0] %></h5>
+        </div>
+        <p class="card-text"><%= f[1] %></p>
+        <div class='card-bottom'>
+          <p class="card-text">
+            <span style="fill: <%= lc.color(f[4]) %>"><%= dot %></span>
+            <span><%= f[4] %></span>
+          </p>
+          <p class="card-text"><%= star %> <%= f[2] %></p>
+          <p class="card-text"><%= forked %> <%= f[3] %></p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

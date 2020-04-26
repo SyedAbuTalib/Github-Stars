@@ -5,38 +5,6 @@ body {
   font-style: normal;
   font-weight: 100;
   background-color: #f6fafb;
-  font-size: 2em;
-}
-.navbar {
-  border: none;
-  box-shadow: none;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  background-color: white;
-  color: black;
-}
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav > li > a {
-  color: black;
-}
-.navbar-default .navbar-brand {
-  font-weight: 700;
-  font-size: 2.25em;
-  letter-spacing: 2px;
-}
-.container-fluid {
-  background-color: #fff;
-}
-.navbar-toggle {
-  border: none;
-}
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:hover {
-  background-color: #fff;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: black;
 }
 
 /* Base styling */
