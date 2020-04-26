@@ -7,12 +7,14 @@
         </div>
         <p class="card-text"><%= f[1] %></p>
         <div class='card-bottom'>
-          <p class="card-text">
-            <span style="fill: <%= lc.color(f[4]) %>"><%= dot %></span>
-            <span><%= f[4] %></span>
-          </p>
-          <p class="card-text"><%= star %> <%= f[2] %></p>
-          <p class="card-text"><%= forked %> <%= f[3] %></p>
+          <% unless f[4].nil? %>
+            <p class="card-text">
+              <span style="fill: <%= lc.color(f[4]) %>"><%= dot %></span>
+              <span><%= f[4] %></span>
+            </p>
+          <% end %>
+          <p class="card-text"><%= star %> <%= f[3] %></p>
+          <p class="card-text"><%= forked %> <%= f[2] %></p>
         </div>
       </div>
     </div>
