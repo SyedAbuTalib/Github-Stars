@@ -8,7 +8,6 @@
       <% @temp_var.each do |f| %>
         <%= erb :card, locals: {repo: repo, dot: dot,
             star: star, forked: forked, lc: @lc, f: f } %>
-        </a>
       <% end %>
     </div>
     <%= erb :_footer %>
