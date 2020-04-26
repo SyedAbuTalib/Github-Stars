@@ -1,4 +1,4 @@
-# Github Stars in Ruby
+# Github Stars
 
 ## Reason
 
