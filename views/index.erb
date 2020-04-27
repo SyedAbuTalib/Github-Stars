@@ -4,7 +4,7 @@
   <body>
     <%= erb :_navbar %>
     <% if defined? rip %>
-      <%= erb :_error %>
+      <%= erb :_error, locals: { rip: rip } %>
     <% end %>
     <%= erb :_searchbar %>
     <%= erb :_footer %>

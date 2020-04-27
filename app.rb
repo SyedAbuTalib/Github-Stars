@@ -17,11 +17,15 @@ get('/') do
   erb :index
 end
 
+not_found do
+  erb :index, locals: { rip: 'Invalid page.' }
+end
+
 post('/') do
   username = params[:username] || 'alipervaiz'
   g = GithubWrapper.new
   list = g.goodies(username)
-  return erb :index, locals: { rip: true } if list.nil?
+  return erb :index, locals: { rip: 'The username you have entered does not exist.' } if list.nil?
 
   @list = list
   @repo = Octicons::Octicon.new('repo')
