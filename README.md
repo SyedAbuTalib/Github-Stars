@@ -1,6 +1,8 @@
 # Github Stars
 
-## Image
+## Demo
+
+Check it out [here](https://github-stars-in-ruby.herokuapp.com/)
 
 ![search](https://user-images.githubusercontent.com/18503982/80301206-5cb5fa80-8768-11ea-86fa-1171f9ff7a66.png)
 
