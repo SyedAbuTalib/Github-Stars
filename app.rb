@@ -21,6 +21,8 @@ post('/') do
   username = params[:username] || 'alipervaiz'
   g = GithubWrapper.new
   list = g.goodies(username)
+  return erb :index, locals: { rip: true } if list.nil?
+
   @list = list
   @repo = Octicons::Octicon.new('repo')
   @dot = Octicons::Octicon.new('primitive-dot')

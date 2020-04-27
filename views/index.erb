@@ -3,6 +3,9 @@
   <%= erb :_head %>
   <body>
     <%= erb :_navbar %>
+    <% if defined? rip %>
+      <%= erb :_error %>
+    <% end %>
     <%= erb :_searchbar %>
     <%= erb :_footer %>
   </body>

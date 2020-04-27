@@ -62,27 +62,21 @@ body {
   background-position: 100% center;
 }
 
-.credits__container {
+.credits_container {
   margin-top: 24px;
 }
 
-.credits__text {
+.credits_text {
   text-align: center;
   font-size: 13px;
   line-height: 18px;
 }
 
-.credits__link {
-  color: #ff8b88;
-  text-decoration: none;
-  transition: color 250ms ease-in;
-}
-
-.credits__link:hover,
-.credits__link:focus {
-  color: rgb(191, 137, 135);
-}
-
 .heart {
   color: #e25555;
+}
+
+.fake_user {
+  margin: auto;
+  width: 40%;
 }
