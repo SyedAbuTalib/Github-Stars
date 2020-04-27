@@ -3,10 +3,10 @@
   <%= erb :_head %>
   <body>
     <%= erb :_navbar %>
-    <%= erb :_searchbar %>
+    <%= erb :_searchbar, locals: { username: username } %>
     <div class='masonry'>
-      <% @temp_var.each do |f| %>
-        <%= erb :card, locals: {repo: repo, dot: dot,
+      <% list.each do |f| %>
+        <%= erb :card, locals: { repo: repo, dot: dot,
             star: star, forked: forked, lc: @lc, f: f } %>
       <% end %>
     </div>

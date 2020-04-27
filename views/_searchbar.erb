@@ -4,7 +4,7 @@
       Search for a user
     </p>
     <form action="/" method="POST">
-      <input class="search__input" name="username" type="text" placeholder="Search">
+      <input class="search__input" name="username" type="text" placeholder="<%= defined?(username) ? username : 'Search' %>">
       <input type="submit" style="display: none" />
     </form>
   </div>
