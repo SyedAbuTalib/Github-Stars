@@ -17,11 +17,19 @@ get('/') do
   erb :index
 end
 
+not_found do
+  erb :index, locals: { rip: 'Invalid page.' }
+end
+
 post('/') do
   username = params[:username] || 'alipervaiz'
   g = GithubWrapper.new
   list = g.goodies(username)
-  @temp_var = list
+  if list.nil?
+    return erb :index, locals: { rip: 'The username you have entered does not exist.' }
+  end
+
+  @list = list
   @repo = Octicons::Octicon.new('repo')
   @dot = Octicons::Octicon.new('primitive-dot')
   @star = Octicons::Octicon.new('star')
@@ -29,7 +37,7 @@ post('/') do
   @lc = LanguageColors::LanguageColors.new
   # puts Gem.loaded_specs.values.map(&:full_gem_path)
 
-  erb :masonry, locals: { list: @temp_var, 'username' => username,
+  erb :masonry, locals: { list: @list, 'username' => username,
                           repo: @repo.to_svg, dot: @dot.to_svg,
                           star: @star.to_svg, forked: @forked.to_svg, lc: @lc }
 end

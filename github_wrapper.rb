@@ -17,7 +17,12 @@ class GithubWrapper
 
   def goodies(username)
     gh = Github.new auto_pagination: true
-    mashes = gh.activity.starring.starred user: username
+    begin
+      mashes = gh.activity.starring.starred user: username
+    rescue StandardError
+      return nil
+    end
+
     list = []
     mashes.each do |f|
       list << [f.name, f.description, f.forks_count, f.stargazers_count,
