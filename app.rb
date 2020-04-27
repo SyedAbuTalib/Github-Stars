@@ -25,7 +25,9 @@ post('/') do
   username = params[:username] || 'alipervaiz'
   g = GithubWrapper.new
   list = g.goodies(username)
-  return erb :index, locals: { rip: 'The username you have entered does not exist.' } if list.nil?
+  if list.nil?
+    return erb :index, locals: { rip: 'The username you have entered does not exist.' }
+  end
 
   @list = list
   @repo = Octicons::Octicon.new('repo')
