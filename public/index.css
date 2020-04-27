@@ -12,21 +12,21 @@ body {
   width: inherit;
 }
 
-.search__container {
+.search_container {
   margin: 0 auto;
   padding-top: 64px;
   padding-bottom: 32px;
   width: 430px;
 }
 
-.search__title {
+.search_title {
   font-size: 22px;
   font-weight: 900;
   text-align: center;
   color: #ff8b88;
 }
 
-.search__input {
+.search_input {
   width: 100%;
   padding: 12px 24px;
 
@@ -46,14 +46,14 @@ body {
   transform-style: preserve-3d;
 }
 
-.search__input::placeholder {
+.search_input::placeholder {
   color: rgba(87, 87, 86, 0.8);
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
-.search__input:hover,
-.search__input:focus {
+.search_input:hover,
+.search_input:focus {
   padding: 12px 0;
   outline: 0;
   border: 1px solid transparent;
