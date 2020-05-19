@@ -16,7 +16,6 @@ body {
   margin: 0 auto;
   padding-top: 64px;
   padding-bottom: 32px;
-  width: 430px;
 }
 
 .search_title {
@@ -28,7 +27,7 @@ body {
 
 .search_input {
   width: 100%;
-  padding: 12px 24px;
+  padding: 10px;
 
   background-color: transparent;
   transition: transform 250ms ease-in-out;
@@ -37,13 +36,11 @@ body {
 
   color: #575756;
   background-color: transparent;
-  /*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
 
   border-radius: 50px;
   border: 1px solid #575756;
   transition: all 250ms ease-in-out;
   backface-visibility: hidden;
-  transform-style: preserve-3d;
 }
 
 .search_input::placeholder {
@@ -79,4 +76,28 @@ body {
 .fake_user {
   margin: auto;
   width: 40%;
+}
+
+/* search_container on large screens */
+@media only screen and (min-width: 1024px) {
+  .search_container {
+    width: 430px;
+    margin: auto;
+  }
+}
+
+/* search_container on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .search_container {
+    width: 430px;
+    margin: auto;
+  }
+}
+
+/* search_container on small screens */
+@media only screen and (max-width: 767px) and (min-width: 0px) {
+  .search_container {
+    width: 80%;
+    margin: auto;
+  }
 }
