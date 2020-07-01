@@ -31,7 +31,7 @@ post('/') do
 
   @list = list
   @repo = Octicons::Octicon.new('repo')
-  @dot = Octicons::Octicon.new('primitive-dot')
+  @dot = Octicons::Octicon.new('dot-fill')
   @star = Octicons::Octicon.new('star')
   @forked = Octicons::Octicon.new('repo-forked')
   @lc = LanguageColors::LanguageColors.new

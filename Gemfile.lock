@@ -26,7 +26,7 @@ GEM
       oauth2 (~> 1.0)
     hashie (3.6.0)
     jwt (2.2.1)
-    language_colors (0.1.1)
+    language_colors (0.1.2)
     mini_portile2 (2.4.0)
     multi_json (1.14.1)
     multi_xml (0.6.0)
@@ -78,7 +78,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   github_api
-  language_colors (~> 0.1.1)
+  language_colors (~> 0.1.2)
   octicons
   sass
   sinatra
