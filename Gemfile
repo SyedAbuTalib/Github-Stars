@@ -14,3 +14,5 @@ gem 'octicons'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'
+
+gem "rackup", "~> 2.1"
