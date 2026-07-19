@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 require 'sinatra'
-require 'sinatra/reloader' if development?
-require 'better_errors'
 require 'octicons'
 require 'language_colors'
 
 configure :development do
+  require 'dotenv/load'
+  require 'sinatra/reloader'
+  require 'better_errors'
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
 end

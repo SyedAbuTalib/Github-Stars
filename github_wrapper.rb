@@ -1,38 +1,27 @@
 # frozen_string_literal: true
 
-require 'github_api'
+require 'octokit'
 
-# This class will hold the stars function
+# Fetches a user's starred repositories from the GitHub API via Octokit.
 class GithubWrapper
-  def stars(username)
-    gh = Github.new auto_pagination: true
-    mashes = gh.activity.starring.starred user: username
-    # logger(mashes.first)
-    list = []
-    mashes.each do |f|
-      list << f.full_name
-    end
-    list
-  end
-
+  # Returns an array of [name, description, forks, stars, language, full_name]
+  # for each repo the user has starred, or nil if the user does not exist.
   def goodies(username)
-    gh = Github.new auto_pagination: true
-    begin
-      mashes = gh.activity.starring.starred user: username
-    rescue StandardError
-      return nil
+    client.starred(username).map do |repo|
+      [repo.name, repo.description, repo.forks_count, repo.stargazers_count,
+       repo.language, repo.full_name]
     end
-
-    list = []
-    mashes.each do |f|
-      list << [f.name, f.description, f.forks_count, f.stargazers_count,
-               f.language, f.full_name]
-    end
-    list
+  rescue Octokit::NotFound
+    nil
   end
 
-  def logger(mash)
-    puts "\n\nlogger has ran\n\n"
-    File.open('mash.log', 'w') { |f| f.write mash.to_s }
+  private
+
+  # Memoized Octokit client. Uses GITHUB_TOKEN when present to lift the API
+  # rate limit from 60 to 5,000 requests/hour; falls back to unauthenticated.
+  def client
+    @client ||= Octokit::Client.new(access_token: ENV['GITHUB_TOKEN']).tap do |c|
+      c.auto_paginate = true
+    end
   end
 end
